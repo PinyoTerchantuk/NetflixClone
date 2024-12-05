@@ -2,6 +2,7 @@ import express from "express"; // packaging
 
 import authRoutes from "./routes/auth.route.js";  //routes
 import movieRoutes from "./routes/movie.route.js"; //routes
+import tvRoutes from "./routes/tv.route.js";
 
 import { ENV_VARS } from "./config/envVar.js"; //config port
 import {connectDB} from "./config/db.js";  // config port
@@ -14,6 +15,7 @@ app.use(express.json()) //will allow us to parse req.body object important dont 
 
 app.use("/api/v1/auth",authRoutes);
 app.use("/api/v1/movie",movieRoutes);
+app.use("/api/v1/tv",tvRoutes);
 
 app.listen(PORT, ()=>{
     console.log("Server started at http://localhost:" + PORT);
