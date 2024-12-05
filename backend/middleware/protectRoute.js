@@ -10,7 +10,7 @@ export const protectRoute = async (req, res , next)=>{
         }
         const decoded = jwt.verify(token, ENV_VARS.JWT_SECRET);
         if(!decoded){
-            return res.status(401).json({success:false, massage:"Unauthorized - Invalid Token"});
+            return res.status(401).json({success:false, massage:"Unauthorized - Invalid Token"}); //ถ้าเราอัพเดตค่าvalue of jwt ในpostman มันจะขึ้นกรณีณี้เผื่อสงสัยว่าทำไมไม่ขึ้น
         }
 
         const user = await User.findById(decoded.userId).select("-password");

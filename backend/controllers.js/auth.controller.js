@@ -46,7 +46,7 @@ export async function signup(req,res){
       generateTokenAndSetCookie(newUser._id,res); //gener generates token and set cookie for new user and saves it to session storage 
       await newUser.save()  // save this user to the database
 
-      //remove password from the response before sending it to the client.
+      //remove password from the response before sending it to the client.เพื่อความปลอดภัยกันถูกโจมตี เเละloginไปเเล้วusersก็ไม่จำเป็นต้องไปรู้รหัสผ่านตัวเอง
       res.status(201).json({success:true,user:{
         ...newUser._doc, 
         password:"",

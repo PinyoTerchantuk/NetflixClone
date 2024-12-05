@@ -3,6 +3,7 @@ import express from "express"; // packaging
 import authRoutes from "./routes/auth.route.js";  //routes
 import movieRoutes from "./routes/movie.route.js"; //routes
 import tvRoutes from "./routes/tv.route.js";
+import searchRoutes from "./routes/search.route.js";
 
 import { ENV_VARS } from "./config/envVar.js"; //config port
 import {connectDB} from "./config/db.js";  // config port
@@ -20,6 +21,7 @@ app.use(cookieParser()); //"cookie-parser": "^1.4.7" pass cookie from request to
 app.use("/api/v1/auth",authRoutes);
 app.use("/api/v1/movie",protectRoute, movieRoutes); // if authen axamine by protectRoute(MIddleWare) and then go next to fetch mvRoutesได้
 app.use("/api/v1/tv",protectRoute, tvRoutes);
+app.use("/api/v1/search",protectRoute, searchRoutes);
 
 app.listen(PORT, ()=>{
     console.log("Server started at http://localhost:" + PORT);
