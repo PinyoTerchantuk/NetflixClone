@@ -99,7 +99,7 @@ export async function getSearchHistory(req, res) {
 
 export async function removeItemFromSearchHistory(req, res) {
     let {id} = req.params;
-    
+    //console.log(typeof id) คือ idที่รับเข้ามาอะมันเป็นStringถ้าลองรันpostmanเเล้วดูในconsole เเต่ว่าการที่เราจะลบidที่เป็นเลขเนี่ยต้องเปลี่ยนเป็นint เเล้วเปลี่ยนจากconst เป็นlet ด้วย
     id = parseInt(id);
 
     try {
