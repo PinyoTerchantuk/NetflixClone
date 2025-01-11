@@ -4,8 +4,8 @@ import HomeScreen from "./HomeScreen";
 
 
 function HomePage() {
-  const user = useAuthStore();
-  return <div>{user ? <HomeScreen/> : <AuthScreen/>}</div>;
+  const {user} = useAuthStore();
+  return <>{user ? <HomeScreen/> : <AuthScreen/>}</>;
    
 }
 

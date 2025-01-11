@@ -38,7 +38,7 @@ export const useAuthStore = create ((set) => ({
         set({ isLoggingOut: true });
         try {
         await axios.post("/api/v1/auth/logout");
-        set({ isLoggingOut: false, user: null });
+        set({  user: null, isLoggingOut: false });
         toast.success("Logged out successfully");
         } catch (error) {
          set({ isLoggingOut: false });
@@ -54,7 +54,7 @@ export const useAuthStore = create ((set) => ({
         } 
         catch (error) {
             set({ isCheckingAuth: false, user: null });
-            
+            //toast.error(error.response.data.message || "An error occurred while checking");
         }
 
     },
