@@ -95,7 +95,7 @@ const SearchPage = () => {
 									</div>
 								) : (
 									<Link
-										to={"/watch/" + result.id}
+										to={"/watch/" + result.id} 
 										onClick={() => {
 											setContentType(activeTab);
 										}}
