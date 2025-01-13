@@ -10,6 +10,7 @@ import { Loader } from "lucide-react"
 import WatchPage from "./Pages/WatchPage"
 import SearchPage from "./Pages/SearchPage.jsx"
 import SearchHistoryPage from "./Pages/SearchHistoryPage.jsx"
+import NotFoundPage from "./Pages/404.jsx"
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
 
       <Route path="/search" element={user ? <SearchPage /> : <Navigate to={"/login"} />} /> 
       <Route path="/history" element={user ? <SearchHistoryPage /> : <Navigate to={"/login"} />} />
+      <Route path="/*" element={<NotFoundPage/>} />
 
     </Routes>
     
