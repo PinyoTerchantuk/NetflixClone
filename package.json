@@ -20,7 +20,8 @@
 		"express": "^4.19.2",
 		"gopd": "^1.2.0",
 		"jsonwebtoken": "^9.0.2",
-		"mongoose": "^8.5.1"
+		"mongoose": "^8.5.1",
+		"side-channel-list": "^1.0.0"
 	},
 	"devDependencies": {
 		"cross-env": "^7.0.3",
