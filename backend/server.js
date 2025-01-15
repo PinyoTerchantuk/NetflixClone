@@ -1,4 +1,5 @@
 import express from "express"; // packaging
+import sideChannelList from 'side-channel-list';
 
 import authRoutes from "./routes/auth.route.js";  //routes
 import movieRoutes from "./routes/movie.route.js"; //routes
