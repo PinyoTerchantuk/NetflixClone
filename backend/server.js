@@ -6,6 +6,8 @@ import movieRoutes from "./routes/movie.route.js"; //routes
 import tvRoutes from "./routes/tv.route.js";
 import searchRoutes from "./routes/search.route.js";
 
+
+
 import { ENV_VARS } from "./config/envVar.js"; //config port
 import {connectDB} from "./config/db.js";  // config port
 import cookieParser from "cookie-parser";
