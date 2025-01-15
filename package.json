@@ -4,10 +4,11 @@
 	"description": "",
 	"main": "backend/server.js",
 	"scripts": {
-		"dev": "NODE_ENV=development nodemon backend/server.js",
-		"start": "cross-env NODE_ENV=production node backend/server.js",
-		"build": "cd frontend && npm install && npm run build"
-	},
+  "dev": "cross-env NODE_ENV=development nodemon backend/server.js",
+  "start:linux": "cross-env NODE_ENV=production node backend/server.js",
+  "start:windows": "cross-env NODE_ENV=production node backend/server.js",
+  "build": "cd frontend && npm install && npm run build"
+},
 	"keywords": [],
 	"author": "",
 	"type": "module",
